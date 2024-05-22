@@ -4,18 +4,23 @@ import About from './components/about.jsx';
 import Projects from './components/projects.jsx';
 import Services from './components/services.jsx';
 import Contact from './components/contact.jsx';
-import Layout from './components/layout.jsx';
+import Header from './components/header.jsx';
+import Footer from './components/footer.jsx';
+
 
 const MainRouter = () => {
     return <div>
-        <Layout/> 
-        <Routes>
-            <Route path="" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <Header/> 
+            <div class="container-fluid">
+                <Routes>
+                    <Route path="" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/projects" element={<Projects />} />
+                    <Route path="/services" element={<Services />} />
+                    <Route path="/contact" element={<Contact />} />
+                </Routes>
+            </div>
+        <Footer/>
     </div>
 }
 
